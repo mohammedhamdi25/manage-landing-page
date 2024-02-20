@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::before{
+    content: url(../images/bg-tablet-pattern.svg);
+    position: absolute;
+    z-index: -1;
+    right: -199px;
+    top: -183px;
+}
+body{
+    overflow-x: hidden;
+    counter-reset: count;
+}
+/* start header */
+.fa-x,.fa-bars{
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+header ul  {
+    color: hsl(228, 39%, 23%);
+}
+header ul li{
+    transition: color 0.3s;
+}
+header ul li:hover{
+    color:#ccc
+}
+
+@media (max-width:767px){
+    header .list{
+        position: absolute;
+        text-align: center;
+        left: 200%;
+        top: 0;
+        transform: translate(-50%,0);
+        width: 100%;
+        height: calc(100vh);
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,0.11817226890756305) 0%, rgba(0,0,0,0.38988095238095233) 100%);
+        transition: left 0.5s;
+    }
+    header ul {
+        width: 90%;
+        background-color: white;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 15px;
+        margin-top: 70px;
+        border-radius: 6px;
+    }
+    header ul li { 
+        padding: 15px 0;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    header button{
+        display: none;
+    }
+    .fa-bars{
+        display: block;
+    }
+    .fa-x{
+        display: block;
+        text-align: right;
+    }
+    body::before{
+        content: url(../images/bg-tablet-pattern.svg);
+        position: absolute;
+        z-index: -1;
+        right: -370px;
+        top: -350px;
+    }
+}
+/* end header */
+/* start better prouducts */
+.better-prouducts .title p {
+    color : #ccc
+}
+@media (max-width:767px){
+    .better-prouducts{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 0 15px;
+    }
+    .better-prouducts > div{
+        width: 100%;
+    
+    }
+    .better-prouducts .title h1{
+        font-size: 50px;
+    } 
+    .better-prouducts .title p{
+        font-size: 22px;
+        line-height: 1.5;
+    } 
+}
+
+/* end better prouducts */
+/* start differente */
+.differente{
+    padding: 0 15px;
+}
+.differente .title{
+    width: 45%;
+}
+.differente .title p {
+    color: #ccc;
+}
+.differente .product{
+    width: 50%;
+}
+.differente .product > div{
+     margin-bottom: 50px;
+     margin-left: 70px;
+}
+.differente .product > div h3{
+    position: relative;
+    color: hsl(228, 39%, 23%);
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.differente .product > div h3::before{
+    counter-increment: count;
+    content: "0"counter(count);
+    position: absolute;
+    background-color: hsl(12, 88%, 59%);
+    color: white;
+    /* padding: 10px; */
+    width: 55px;
+    height: 35px;
+    left: -80px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+}
+.differente .product > div p {
+     color: #ccc;
+     font-size: 18px;
+}
+@media (max-width:767px){
+    .differente{
+        flex-direction: column;
+        text-align: center;
+        padding: 0 15px;
+    }
+    .differente > div{
+        width: 100% !important;
+    }
+    .differente .title{
+        margin-bottom: 40px;
+    }
+    .differente .title h2{
+        font-size: 64px !important;
+        margin-bottom: 20px;
+    }
+    .differente .title p{
+        font-size: 22px;
+    }
+    .differente .product > div{
+        margin-left: 0;
+        text-align: start;
+    }
+    .differente .product > div h3{
+        background-color: hsl(13, 100%, 96%);
+        padding: 5px 0 5px 100px;
+        border-radius: 1000px 0 0 1000px;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .differente .product > div h3::before{
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 80px;
+    }
+    
+}
+/* end differente */
+/* srart they sayed */
+.they-sayed{
+    padding: 0 15px;
+}
+.they-sayed .container-they-sayed {
+    position: relative;
+}
+.they-sayed .container-they-sayed div{
+    width: calc((100% / 4) - 12px);
+    background-color: hsl(0, 0%, 94%);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 12px;
+    border-radius: 10px;
+    
+}
+.they-sayed .container-they-sayed div img {
+    width: 70px;
+    transform: translateY(-50px);
+    margin-bottom: -40px;
+}
+.they-sayed .container-they-sayed div p{
+    font-size: 16px;
+    color: #979797;
+}
+.they-sayed .container-they-sayed div h4{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: hsl(228, 39%, 23%)
+}
+.they-sayed .list{
+    margin-top: -30px;
+    margin-bottom: 30px;
+    z-index: 2;
+    display: none;
+}
+.they-sayed .list li{
+    width: 15px;
+    height: 15px;
+    border: 2px solid hsl(12, 88%, 59%);
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.they-sayed .list li.active{
+    background-color: hsl(12, 88%, 59%);
+}
+@media (max-width:767px){
+    .they-sayed .list{
+        display: flex;
+    }
+    .they-sayed .container-they-sayed {
+        height: 200px;
+        width: 100%;
+    }
+    .they-sayed .container-they-sayed div{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+    }
+    .they-sayed .container-they-sayed div.active{
+
+        display: flex;
+    }
+}
+@media (min-width:768px)  {
+    .they-sayed .container-they-sayed div{
+        width: calc((100% / 2) - 12px);
+        margin-bottom: 50px;
+    }
+}
+@media (min-width:992px){
+    .they-sayed .container-they-sayed div{
+        width: calc((100% / 3) - 12px);
+        
+    }
+}
+@media (min-width:1200px){
+    .they-sayed .container-they-sayed div{
+        width: calc((100% / 4) - 12px);
+        
+    }
+}
+/* end they sayed */
+/* start team work */
+.team-work{
+    background-color: hsl(12, 88%, 59%); 
+    padding: 30px 15px ;
+    display: flex;
+    align-items: center;
+}
+.team-work h3{
+    font-size: 34px;
+    max-width: 50%;
+    font-weight: 700;
+}
+.team-work > div > div{
+    display: flex;
+    align-items: center;
+}
+.team-work button{
+    height: fit-content;
+}
+@media (max-width:767px){
+    .team-work > div{
+        flex-direction: column !important;
+        justify-content: start;
+        align-items: center;
+    } 
+    .team-work h3 {
+        font-size: 50px;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+/* end team work */
+/* star footer */
+footer{
+    background-color: hsl(233, 12%, 13%);
+    justify-content : space-between;
+}
+footer .container{
+    padding: 0 15px;
+}
+footer .container > form{
+    display: flex;
+    align-items: flex-start;
+}
+footer .container > form input{
+    width: calc(75% - 4px);
+    padding: 8px 8px;
+    margin-right: 4px ;
+}
+footer .container > form button{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .container  ul li{
+    transition: color 0.3s;
+    cursor: pointer;
+    width: fit-content;
+}
+footer .container  ul li:hover{
+    color: hsl(12, 88%, 59%);
+}
+@media (max-width:767px){
+    footer .container{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    footer .container > div:nth-of-type(1){
+        flex-direction: column-reverse;
+        gap :20px;
+    }
+    footer .container > div:nth-of-type(1) .social-media{
+        gap: 30px;
+    }
+    footer .container > div:nth-of-type(1) .social-media img{
+        width: 30px;
+    }
+    footer .container > div{
+        width: 100%;
+        padding: 0 20px ;
+    }
+    footer .container > div:nth-of-type(2){
+        justify-content: center;
+        margin: 20px 0;
+    }
+    
+    footer .container  ul li{
+        width: fit-content;
+    }
+    footer .container form{
+        width: 100%;
+    }
+}
+@media (min-width:768px)  {
+    
+}
+@media (min-width:992px){
+    
+}
+@media (min-width:1200px){
+    
+}
+/* end footer */
+/* frame work */
+.get-started{
+    padding: 8px 28px;
+    background-color: hsl(12, 88%, 59%);
+    color: white;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: background-color 0.3s;
+}
+.get-started:hover{
+    background-color: hsl(12, 91%, 68%);
+}
+.get-started.white{
+    background-color: white;
+    color: hsl(12, 88%, 59%);
+}
+.h1{
+    color: hsl(228, 39%, 23%);
+    line-height: 1.2;
+    font-weight: 600;
+}
+
